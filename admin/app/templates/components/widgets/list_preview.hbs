@@ -1,0 +1,9 @@
+<ul class="cms-list-preview">
+{{#each item in widget.items}}
+  <li class="cms-list-item-preview widget">
+  {{#each widget in item.widgets}}
+    {{cms-widget widget=widget type="preview"}}
+  {{/each}}
+  </li>
+{{/each}}
+</ul>
