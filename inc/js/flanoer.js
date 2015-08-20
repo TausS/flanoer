@@ -77,6 +77,19 @@ $(document).ready(function(){
 
 });
 
+$(function() {
+  /*
+  // markdown code
+  var $textarea = $('textarea'),
+      $preview = $('<div id="preview" />').insertAfter($textarea),
+      convert = new Markdown.getSanitizingConverter().makeHtml;
+
+  
+  $textarea.keyup(function() {
+    $preview.html(convert($textarea.val()));
+  }).trigger('keyup');
+  */
+});
 
 $("#home").click(function() {
     $('html, body').animate({

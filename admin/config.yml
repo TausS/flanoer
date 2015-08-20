@@ -1,8 +1,7 @@
 backend:
-  name: netlify-api
-  repo: owner/repo # Path to your Github repository
+  name: github-api
+  repo: TausS/flanoer # Path to your Github repository
   branch: master # Branch to update (master by default)
-  url: 'http://localhost:8080'
   media_folder: "assets/uploads" # Folder where user uploaded files should go
 
 collections: # A list of collections the CMS should be able to edit
