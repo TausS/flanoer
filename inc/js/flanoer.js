@@ -78,18 +78,24 @@ $(document).ready(function(){
 });
 
 $(function() {
-  /*
-  // markdown code
-  var $textarea = $('textarea'),
-      $preview = $('<div id="preview" />').insertAfter($textarea),
-      convert = new Markdown.getSanitizingConverter().makeHtml;
-
-  
-  $textarea.keyup(function() {
-    $preview.html(convert($textarea.val()));
-  }).trigger('keyup');
-  */
+      var blazer = loadMD.fetch('_products/flanr-blazer-jacket-black.md').done(function(data){
+          $('#flanr-blazer-jacket-black').html(loadMD.toHTML(data));
+      });
 });
+
+var loadMD = {
+    fetch: function(strUrl){
+        return $.ajax({
+			url: strUrl,
+			type: 'GET'
+		});
+    },
+    
+    toHTML: function(str){
+        var convert = new Markdown.getSanitizingConverter().makeHtml;
+        return convert(str);
+    }
+};
 
 $("#home").click(function() {
     $('html, body').animate({
