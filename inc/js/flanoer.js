@@ -81,6 +81,8 @@ $(function() {
       var blazer = loadMD.fetch('_products/flanr-blazer-jacket-black.md').done(function(data){
           $('#flanr-blazer-jacket-black').html(loadMD.toHTML(data));
       });
+      
+       
 });
 
 var loadMD = {
@@ -92,8 +94,9 @@ var loadMD = {
     },
     
     toHTML: function(str){
-        var convert = new Markdown.getSanitizingConverter().makeHtml;
-        return convert(str);
+        jsFront(jsyaml);
+        var parsed = jsyaml.loadFront(str);
+        console.log(parsed);
     }
 };
 
