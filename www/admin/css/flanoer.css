@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'AmericanTypewriter';
+    font-weight: light;
+    src: url("/fonts/AmericanTypewriterStd-Light.otf") format("opentype");
+}
+body.ember-application .cms-logo {
+  width: 120px;
+}
+div.cms-logo a {
+	  background-image: url(http://flanoer.dk/images/logowhite.png);
+	  width: 150px;
+	  height: 40px;
+	  display: block;
+	  background-repeat: no-repeat;
+	  background-size: contain;
+}
+div.cms-logo a svg{
+	  display: none;
+}
+body.ember-application .cms-navbar-top {
+  height: 80px;
+  line-height: 40px;
+}
+.cms.cms-content {
+  background-color: #fff4e0;
+}
+body.ember-application .cms-aside, body.ember-application .cms-control {
+  background: #eeeeee;
+}
+body.ember-application .cms-list-header, body.ember-application .cms-message-title {
+  color: #333333;
+  border-bottom: 1px solid #333333;
+  text-transform: uppercase;
+  font: 300 2.5em / 30px AmericanTypewriter;
+}
+body.ember-application .cms-nav-menu {
+  color: #333333;
+}
+body.ember-application .cms-aside-link.active {
+  color: #333333;
+  font: 300 1.2em / 30px AmericanTypewriter;
+}
+body.ember-application .cms-aside-new-link, body.ember-application .cms-new-link {
+  line-height: 30px;
+}
+body.ember-application .cms-control label {
+  color: #333;
+}
+body.ember-application .cms-control:after {
+  background-color: #eeeeee;
+  border-right: 1px solid #d0c5ba;
+  border-bottom: 1px solid #d0c5ba;
+}
+body.ember-application .cms-widget {
+  border-bottom: 1px solid #d0c5ba;
+}
+body.ember-application .cms-control input:not([type=checkbox]), body.ember-application .cms-control textarea {
+  background-color: #fefefe;
+}
+body.ember-application .cms-navbar-top {
+  border-bottom: 2px solid #ddd;
+}
+body.ember-application .cms-aside-link {
+  font: 300 1.2em / 30px AmericanTypewriter;
+}
