@@ -1,8 +1,15 @@
-backend:
-  name: github-api
-  repo: TausS/flanoer # Path to your Github repository
-  branch: master # Branch to update (master by default)
-  media_folder: "www/data/assets/uploads" # Folder where user uploaded files should go
+development:
+  backend:
+    name: netlify-api
+    url: http://localhost:8080
+
+production:
+  backend:
+      name: github-api
+      repo: TausS/flanoer # Path to your Github repository
+      branch: master # Branch to update (master by default)
+      media_folder: "www/data/assets/uploads" # Folder where user uploaded files should go
+
 
 collections: # A list of collections the CMS should be able to edit
   - name: "product" # Used in routes, ie.: /admin/collections/:slug/edit
@@ -20,11 +27,11 @@ collections: # A list of collections the CMS should be able to edit
       
   - name: "about" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "About" # Used in the UI, ie.: "New Post"
-    folder: "www/data/_about" # The path to the folder where the documents are stored
+    folder: "www/data/_about_us" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - {label: "About us title", name: "title", widget: "string", tagname: "h1"}
-      - {label: "About us text", name: "description", widget: "markdown"}
+      - {label: "About title", name: "title", widget: "string", tagname: "h1"}
+      - {label: "About text", name: "description", widget: "markdown"}
     meta: # Meta data fields. Just like fields, but without any preview element
       - {label: "Publish Date", name: "date", widget: "datetime"}
 

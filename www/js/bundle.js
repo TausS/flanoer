@@ -9181,3 +9181,5 @@ $('#prevImg').click(function() {
 $('#nextImg').click(function() {
     $('.owl-carousel').trigger('next.owl.carousel');
 })
+
+//window.CMS_ENV = "production";
