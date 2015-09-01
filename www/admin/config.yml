@@ -8,8 +8,9 @@ production:
       name: github-api
       repo: TausS/flanoer # Path to your Github repository
       branch: master # Branch to update (master by default)
-      media_folder: "www/data/assets/uploads" # Folder where user uploaded files should go
 
+media_folder: "www/data/assets/uploads" # Folder where user uploaded files should go
+public_folder: "www" # Tells the CMS what folder assets are served from
 
 collections: # A list of collections the CMS should be able to edit
   - name: "product" # Used in routes, ie.: /admin/collections/:slug/edit
@@ -18,7 +19,7 @@ collections: # A list of collections the CMS should be able to edit
     create: false # Allow users to create new documents in this collection
 
     fields: # The fields each document in this collection have
-      - {label: "Image", name:"image", widget: "image"}
+      - {label: "Image", name: "image", widget: "image"}
       - {label: "Product title", name: "title", widget: "string", tagname: "h1"}
       - {label: "Product description", name: "description", widget: "markdown"}
       - {label: "Price", name: "price", widget: "number"}
